@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './core/containers/home/home.component';
 import {CoreModule} from "./core/core.module";
 import {RouterModule} from "@angular/router";
+import {AppRoutingModule} from "./app-routing.module";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import {RouterModule} from "@angular/router";
   imports: [
     BrowserModule,
     CoreModule,
-    RouterModule
+    RouterModule,
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

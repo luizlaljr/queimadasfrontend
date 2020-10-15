@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './core/containers/home/home.component';
+import {CoreModule} from "./core/core.module";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import { HomeComponent } from './core/containers/home/home.component';
     HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CoreModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

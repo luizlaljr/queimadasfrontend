@@ -2,16 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './core/containers/home/home.component';
-import {CoreModule} from "./core/core.module";
-import {RouterModule} from "@angular/router";
-import {AppRoutingModule} from "./app-routing.module";
-import {SharedModule} from "./shared/shared.module";
+import { CoreModule } from "./core/core.module";
+import { RouterModule } from "@angular/router";
+import { AppRoutingModule } from "./app-routing.module";
+import { SharedModule } from "./shared/shared.module";
+import { HeaderComponent } from './core/components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +19,6 @@ import {SharedModule} from "./shared/shared.module";
     RouterModule,
     AppRoutingModule,
     SharedModule,
-    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

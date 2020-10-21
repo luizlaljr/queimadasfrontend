@@ -1,3 +1,7 @@
+mat-toolbar{
+    height: 4em;
+  }
+
 .header {
     background: rgb(186,255,186);
     background: -moz-linear-gradient(180deg, rgba(186,255,186,1) 0%, rgba(144,238,144,1) 45%, rgba(121,222,121,1) 100%);

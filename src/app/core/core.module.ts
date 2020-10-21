@@ -9,6 +9,7 @@ import { OrientacoesComponent } from './containers/orientacoes/orientacoes.compo
 import { LojaComponent } from './containers/loja/loja.component';
 import { RouterModule } from '@angular/router';
 
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -17,7 +18,10 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule,
     CoreRoutingModule,
-    SharedModule
+    SharedModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAL8R0_7IN0b52lBZJ3Pp1T0NdpBrnk1kY'
+    })
   ]
 })
 export class CoreModule { }

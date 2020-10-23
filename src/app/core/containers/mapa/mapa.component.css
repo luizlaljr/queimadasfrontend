@@ -1,3 +1,12 @@
+.map-container {
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  position: relative;
+  right: 0px;
+}
+
 agm-map {
-    height: 700px;
+  height: 710px;
+  width: 100%;
 }

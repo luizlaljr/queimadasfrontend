@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CoreModule } from "./core/core.module";
 import { RouterModule } from "@angular/router";
@@ -8,6 +8,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { SharedModule } from "./shared/shared.module";
 import { HeaderComponent } from './core/components/header/header.component';
 import { FooterComponent } from './core/components/footer/footer.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { FooterComponent } from './core/components/footer/footer.component';
     RouterModule,
     AppRoutingModule,
     SharedModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,29 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MapaService } from './mapa.service';
 
 @Component({
   selector: 'app-mapa',
   templateUrl: './mapa.component.html',
-  styleUrls: ['./mapa.component.css']
+  styleUrls: ['./mapa.component.css'],
+  providers: [MapaService],
 })
 export class MapaComponent implements OnInit {
 
-  // center: {
-  //   lat: -18.112668,
-  //   lng: -57.240200
-  // };
-  // zoom: 7.05;
-  // mapTypeId: 'hybrid';
+  latitude: Number;
+  longitude: Number;
+  zoom: Number;
+  mapTypeId: String;
+  geoJsonObject: Object;
 
-  latitude: number;
-  longitude: number;
-  zoom: number;
+  constructor(private _mapaService: MapaService) { }
 
-  constructor() { }
+  getGeoJSON(): void {
+    this._mapaService.getGeoJson()
+      .subscribe(resGeoJsonData => this.geoJsonObject = resGeoJsonData);
+  }
 
   ngOnInit(): void {
 
     this.setLocation();
+    
+    this.getGeoJSON();
 
   }
 
@@ -32,7 +35,20 @@ export class MapaComponent implements OnInit {
     this.latitude = -18.112668;
     this.longitude = -57.240200;
     this.zoom = 4.55;
-
+    this.mapTypeId = 'hybrid';
   }
+
+  styleFunc(feature) {
+    return {
+      icon: 'assets/img/fire32.png',
+      visible: 'true',
+    };
+  }
+
+  onClick(clickEvent: any): void {
+
+    console.log(clickEvent.feature.getProperty("municipio"));
+    console.log(clickEvent.feature.getProperty("bioma"));
+}
 
 }

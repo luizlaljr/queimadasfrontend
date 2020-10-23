@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
 
 
+
 @NgModule({
   declarations: [HomeComponent, MapaComponent, AreasProtegidasComponent, OrientacoesComponent, LojaComponent],
   imports: [

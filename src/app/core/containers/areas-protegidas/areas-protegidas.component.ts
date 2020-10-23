@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AreasProtegidasComponent implements OnInit {
 
+  divMap: String;
+
   constructor() { }
 
   ngOnInit(): void {

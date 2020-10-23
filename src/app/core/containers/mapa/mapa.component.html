@@ -1,8 +1,6 @@
-<agm-map 
-[latitude]="latitude" 
-[longitude]="longitude" 
-[zoom]="zoom" >
-  <agm-marker 
-  [latitude]="latitude" 
-  [longitude]="longitude"></agm-marker>
-</agm-map>
+<div class="map-container">
+  <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" [mapTypeId]="mapTypeId">
+    <agm-data-layer *ngIf="geoJsonObject" [geoJson]="geoJsonObject" (layerClick)="onClick($event)" [style]="styleFunc">
+    </agm-data-layer>    
+  </agm-map>
+</div>

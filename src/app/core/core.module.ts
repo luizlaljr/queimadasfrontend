@@ -21,7 +21,8 @@ import { AgmCoreModule } from '@agm/core';
     CoreRoutingModule,
     SharedModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAL8R0_7IN0b52lBZJ3Pp1T0NdpBrnk1kY'
+      apiKey: 'AIzaSyAL8R0_7IN0b52lBZJ3Pp1T0NdpBrnk1kY',
+      language: 'pt-BR'
     })
   ]
 })

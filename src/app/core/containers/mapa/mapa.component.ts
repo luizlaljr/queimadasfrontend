@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MapaService } from './mapa.service';
+import { AgmMap, AgmInfoWindow } from '@agm/core';
 
 @Component({
   selector: 'app-mapa',
@@ -45,10 +46,28 @@ export class MapaComponent implements OnInit {
     };
   }
 
-  onClick(clickEvent: any): void {
+  onClick(clickEvent: any, gm: AgmMap, infoWindow: AgmInfoWindow): void {
 
     console.log(clickEvent.feature.getProperty("municipio"));
     console.log(clickEvent.feature.getProperty("bioma"));
+
+  //   "properties": {
+  //     "id": "d5b3a7b8-2034-3651-a082-aabc855931cb",
+  //     "longitude": -38.326,
+  //     "latitude": -7.34,
+  //     "data_hora_gmt": "2020-10-11T15:35:00Z",
+  //     "satelite": "AQUA_M-T",
+  //     "municipio": "DIAMANTE",
+  //     "estado": "PARAÍBA",
+  //     "pais": "Brasil",
+  //     "municipio_id": 2505600,
+  //     "estado_id": 25,
+  //     "pais_id": 33,
+  //     "numero_dias_sem_chuva": 82,
+  //     "precipitacao": 0,
+  //     "risco_fogo": 1,
+  //     "bioma": "Caatinga"
+  // }
 }
 
 }

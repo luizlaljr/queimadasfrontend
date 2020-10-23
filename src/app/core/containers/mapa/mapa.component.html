@@ -1,6 +1,11 @@
 <div class="map-container">
-  <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" [mapTypeId]="mapTypeId">
-    <agm-data-layer *ngIf="geoJsonObject" [geoJson]="geoJsonObject" (layerClick)="onClick($event)" [style]="styleFunc">
-    </agm-data-layer>    
-  </agm-map>
+  <agm-data-layer [geoJson]="geoJsonObject"  [style]="styleFunc" (layerClick)="onClick($event, gm, infoWindow)" >
+    <agm-info-window [disableAutoPan]="true" 
+                     [latitude]="infoWindowLat" 
+                     [longitude] = "infoWindowLong" 
+                     [isOpen]="infoWindowIsOpen"
+                      #infoWindow>
+      {{infoWindowText}}
+   </agm-info-window>
+  </agm-data-layer>
 </div>

@@ -46,7 +46,7 @@ export class MapaComponent implements OnInit {
     };
   }
 
-  onClick(clickEvent: any, gm: AgmMap, infoWindow: AgmInfoWindow): void {
+  onClick(clickEvent: any): void {
 
     console.log(clickEvent.feature.getProperty("municipio"));
     console.log(clickEvent.feature.getProperty("bioma"));

@@ -7,8 +7,8 @@ mat-toolbar{
     background: -moz-linear-gradient(180deg, rgba(186,255,186,1) 0%, rgba(144,238,144,1) 45%, rgba(121,222,121,1) 100%);
     background: -webkit-linear-gradient(180deg, rgba(186,255,186,1) 0%, rgba(144,238,144,1) 45%, rgba(121,222,121,1) 100%);
     background: linear-gradient(180deg, rgba(186,255,186,1) 0%, rgba(144,238,144,1) 45%, rgba(121,222,121,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#baffba",endColorstr="#79de79",GradientType=1); 
-    
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#baffba",endColorstr="#79de79",GradientType=1);
+
     color: #404f24;
 }
 
@@ -19,7 +19,7 @@ mat-toolbar{
 .header .title-group {
     padding-left: 5px;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: 2em;
 }
 
 .header .spacer {
@@ -29,3 +29,10 @@ mat-toolbar{
 .mat-button{
     font-size: 1.4rem;
 }
+
+.opcoes {
+  font-size: 1em;
+}
+
+.teste {
+margin-bottom: 19px}

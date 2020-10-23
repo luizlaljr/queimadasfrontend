@@ -32,7 +32,7 @@ export class MapaComponent implements OnInit {
 
   private setLocation() {
 
-    this.latitude = -18.112668;
+    this.latitude = -14.112668;
     this.longitude = -57.240200;
     this.zoom = 4.55;
     this.mapTypeId = 'hybrid';

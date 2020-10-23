@@ -47,9 +47,13 @@ export class MapaComponent implements OnInit {
   }
 
   onClick(clickEvent: any): void {
-
+    console.log(clickEvent.feature.getProperty("estado"))
     console.log(clickEvent.feature.getProperty("municipio"));
     console.log(clickEvent.feature.getProperty("bioma"));
+
+    console.log(clickEvent.feature.getProperty("numero_dias_sem_chuva"))
+    console.log(clickEvent.feature.getProperty("precipitacao"));
+    console.log(clickEvent.feature.getProperty("risco_fogo"));
 
   //   "properties": {
   //     "id": "d5b3a7b8-2034-3651-a082-aabc855931cb",

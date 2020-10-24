@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MapaService } from './mapa.service';
 import { AgmMap, AgmInfoWindow } from '@agm/core';
+import {MatDialog} from "@angular/material/dialog";
+import {MapaDialogComponent} from "../mapa-dialog/mapa-dialog.component";
 
 @Component({
   selector: 'app-mapa',
@@ -16,7 +18,8 @@ export class MapaComponent implements OnInit {
   mapTypeId: String;
   geoJsonObject: Object;
 
-  constructor(private _mapaService: MapaService) { }
+  constructor(private _mapaService: MapaService,
+              public dialog: MatDialog) { }
 
   getGeoJSON(): void {
     this._mapaService.getGeoJson()
@@ -26,7 +29,7 @@ export class MapaComponent implements OnInit {
   ngOnInit(): void {
 
     this.setLocation();
-    
+
     this.getGeoJSON();
 
   }
@@ -47,13 +50,18 @@ export class MapaComponent implements OnInit {
   }
 
   onClick(clickEvent: any): void {
-    console.log(clickEvent.feature.getProperty("estado"))
-    console.log(clickEvent.feature.getProperty("municipio"));
-    console.log(clickEvent.feature.getProperty("bioma"));
 
-    console.log(clickEvent.feature.getProperty("numero_dias_sem_chuva"))
-    console.log(clickEvent.feature.getProperty("precipitacao"));
-    console.log(clickEvent.feature.getProperty("risco_fogo"));
+    const dadosDoMapa = {
+      estado: clickEvent.feature.getProperty("estado"),
+      municipio: clickEvent.feature.getProperty("municipio"),
+      bioma: clickEvent.feature.getProperty("bioma"),
+      diasSemChuva: clickEvent.feature.getProperty("numero_dias_sem_chuva"),
+      precipitacao: clickEvent.feature.getProperty("precipitacao"),
+      fogo: clickEvent.feature.getProperty("risco_fogo")
+    }
+
+    console.log(dadosDoMapa);
+    this.openDialog(dadosDoMapa);
 
   //   "properties": {
   //     "id": "d5b3a7b8-2034-3651-a082-aabc855931cb",
@@ -72,6 +80,14 @@ export class MapaComponent implements OnInit {
   //     "risco_fogo": 1,
   //     "bioma": "Caatinga"
   // }
+}
+
+openDialog(dadosDoMapa: any): void{
+    this.dialog.open(MapaDialogComponent, {
+      width: '300px',
+      height: '300px',
+      data: dadosDoMapa
+    })
 }
 
 }

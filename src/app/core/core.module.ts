@@ -10,11 +10,12 @@ import { LojaComponent } from './containers/loja/loja.component';
 import { RouterModule } from '@angular/router';
 
 import { AgmCoreModule } from '@agm/core';
+import { MapaDialogComponent } from './containers/mapa-dialog/mapa-dialog.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, MapaComponent, AreasProtegidasComponent, OrientacoesComponent, LojaComponent],
+  declarations: [HomeComponent, MapaComponent, AreasProtegidasComponent, OrientacoesComponent, LojaComponent, MapaDialogComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -24,6 +25,7 @@ import { AgmCoreModule } from '@agm/core';
       apiKey: 'AIzaSyAL8R0_7IN0b52lBZJ3Pp1T0NdpBrnk1kY',
       language: 'pt-BR'
     })
-  ]
+  ],
+  entryComponents:[MapaDialogComponent]
 })
 export class CoreModule { }

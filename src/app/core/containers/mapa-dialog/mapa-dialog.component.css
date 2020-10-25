@@ -1,0 +1,36 @@
+.title,
+.btn-close {
+  color: brown;
+}
+
+.bioma {
+  margin: 0;
+  padding: 0;
+  color: green;
+  border-bottom: 1px solid brown;
+}
+
+.describe {
+  margin-top: 10px;
+}
+
+.fire {
+  height: 15px;
+  width: 15px;
+}
+
+.container {
+  display: block;
+  position: fixed;
+  width: 400px;
+}
+
+.btn-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  border-radius: 17px;
+  background-color: rgb(182, 52, 52);
+  color: white;
+  padding: 5px;
+}

@@ -1,9 +1,16 @@
-<h1>TESTEEEE FOIIIIIII</h1>
-<p>
-  estado{{ data.estado }}
-  municipio{{ data.municipio }}
-  bioma{{ data.bioma }}
-  diasSemChuva{{ data.diasSemChuva }}
-  precipitacao{{ data.precipitacao }}
-  fogo{{ data.fogo }}
-</p>
+<div class="container">
+  <span class="btn-close" mat-dialog-close>
+    x
+  </span>
+  <div class="title">
+    <h3 mat-dialog-title>{{data.municipio}} - {{data.estado}}</h3>
+  </div>
+  <div class="bioma">
+    <h4><b>Bioma: </b>{{data.bioma}}</h4>
+  </div>
+  <div mat-dialog-content class="describre">
+    <p><b>Dias sem chover: </b>{{data.diasSemChuva}}<br></p>
+    <p><b>Precipitação: </b>{{data.precipitacao}}<br></p>
+    <p><b>Risco de Incêndios: </b>{{data.fogo}}<br></p>
+  </div>
+</div>

@@ -8,7 +8,6 @@ import { AreasProtegidasComponent } from './containers/areas-protegidas/areas-pr
 import { OrientacoesComponent } from './containers/orientacoes/orientacoes.component';
 import { LojaComponent } from './containers/loja/loja.component';
 import { RouterModule } from '@angular/router';
-
 import { AgmCoreModule } from '@agm/core';
 import { MapaDialogComponent } from './containers/mapa-dialog/mapa-dialog.component';
 

@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   getGrafficImage(): void {
     this._homeService.getGraffic().subscribe(
-      resGraffic => { this.graf = resGraffic, console.log(resGraffic) });
+      resGraffic => { this.graf = resGraffic, console.log(resGraffic.url) });
   }
 
   ngOnInit(): void {

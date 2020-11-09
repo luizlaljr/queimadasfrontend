@@ -10,11 +10,12 @@ import { LojaComponent } from './containers/loja/loja.component';
 import { RouterModule } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
 import { MapaDialogComponent } from './containers/mapa-dialog/mapa-dialog.component';
+import { ProdutoCardComponent } from './containers/produto-card/produto-card.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, MapaComponent, AreasProtegidasComponent, OrientacoesComponent, LojaComponent, MapaDialogComponent],
+  declarations: [HomeComponent, MapaComponent, AreasProtegidasComponent, OrientacoesComponent, LojaComponent, MapaDialogComponent, ProdutoCardComponent],
   imports: [
     CommonModule,
     RouterModule,

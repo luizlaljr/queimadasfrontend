@@ -1,10 +1,11 @@
 <mat-card>
-    <div>
-      <mat-card-title>{{produto.nome}}</mat-card-title>
-    </div>
-    {{produto.imagem}}
   <div>
-
+    <mat-card-title>{{produto.nome}}</mat-card-title>
   </div>
-
+  <img src="{{produto.imagem}}" width="100" height="100">
+  <div>
+    <a mat-raised-button href="{{produto.linkVenda}}" target="_blank">Comprar!</a>
+  </div>
 </mat-card>
+
+

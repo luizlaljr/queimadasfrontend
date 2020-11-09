@@ -8,7 +8,7 @@
   background: -webkit-linear-gradient(180deg, rgba(121, 222, 121, 1) 0%, rgba(88, 173, 88, 1) 70%, rgba(68, 144, 68, 1) 100%);
   background: linear-gradient(180deg, rgba(121, 222, 121, 1) 0%, rgba(88, 173, 88, 1) 70%, rgba(68, 144, 68, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#79de79", endColorstr="#449044", GradientType=1);
-  position: absolute;
   bottom: 0;
   width: 100%;
+  margin-top: auto;
 }

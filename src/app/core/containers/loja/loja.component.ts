@@ -8,20 +8,45 @@ import {Component, OnInit} from '@angular/core';
 export class LojaComponent implements OnInit {
 
   produtos = [{
-    nome: 'caneca',
-    imagem: 'text',
-    linkVenda: ''
+    nome: 'Caneca',
+    imagem: 'assets/produtos/caneca.jpg',
+    linkVenda: 'https://mpago.la/1k2ubbE'
   },
     {
-      nome: 'boné',
-      imagem: 'text',
-      linkVenda: ''
+      nome: 'Boné',
+      imagem: 'assets/produtos/bone_branco.jpg',
+      linkVenda: 'https://mpago.la/2gSEKrF'
     },
     {
-      nome: 'camisa',
-      imagem: 'text',
-      linkVenda: '',
-    }]
+      nome: 'Camisa Azul',
+      imagem: 'assets/produtos/camisa_azul.jpg',
+      linkVenda: 'https://mpago.la/2cwYqAj',
+    },
+    {
+      nome: 'Eco Bag',
+      imagem: 'assets/produtos/ecobag.jpg',
+      linkVenda: 'https://mpago.la/1inXvC8',
+    },
+    {
+      nome: 'Chaveiro',
+      imagem: 'assets/produtos/chaveiro_quadrado.jpg',
+      linkVenda: 'https://mpago.la/17VWsYt',
+    },
+    {
+      nome: 'Camisa Branca',
+      imagem: 'assets/produtos/camisa_branca.jpg',
+      linkVenda: 'https://mpago.la/31fS7KP',
+    },
+    {
+      nome: 'Camisa Rosa',
+      imagem: 'assets/produtos/camisa_rosa.jpg',
+      linkVenda: 'https://mpago.la/33CiQed',
+    },
+    {
+      nome: 'Caneca Azul',
+      imagem: 'assets/produtos/caneca_azul.jpg',
+      linkVenda: 'https://mpago.la/27qjqNL'
+    },]
 
   constructor() {
   }
@@ -30,3 +55,4 @@ export class LojaComponent implements OnInit {
   }
 
 }
+

@@ -1,1 +1,5 @@
-<p>loja works!</p>
+<mat-grid-list rowHeight="300px" cols="4">
+  <mat-grid-tile *ngFor="let produto of produtos">
+    <app-produto-card [produto]="produto"></app-produto-card>
+  </mat-grid-tile>
+</mat-grid-list>

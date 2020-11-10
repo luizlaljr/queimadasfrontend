@@ -10,5 +10,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#79de79", endColorstr="#449044", GradientType=1);
   bottom: 0;
   width: 100%;
-  margin-top: auto;
+  height: 50px;
+  margin: auto;
+  position: fixed;
 }

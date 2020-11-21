@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class MapaService {
 
-  private _url: string = 'https://queimadas.dgi.inpe.br/queimadas/dados-abertos/download/?utm_campaign=dados-abertos&outputFormat=json&utm_medium=landing-page&time=48h&utm_content=focos_brasil_48h&id=focos_brasil&utm_source=landing-page';
+  private _url: string = 'https://queimadas-app-backend.herokuapp.com/';
 
   constructor(private _httpClient: HttpClient) { }
 
